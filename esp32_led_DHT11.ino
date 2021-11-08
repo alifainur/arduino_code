@@ -22,10 +22,10 @@ const char* password = "classiot123";
 const char* mqtt_server = "192.168.0.5";  // alamat IP bagi Raspberry Pi4
 
 // Menamakan topik, pastikan guna nama sendiri
-#define sub1 "ali/fainur/led1"
-#define sub2 "ali/fainur/led2"
-#define sub3 "ali/fainur/led3"
-#define sub4 "ali/fainur/led4"
+#define sub1 "mtech/led1"
+#define sub2 "mtech/led2"
+#define sub3 "mtech/led3"
+#define sub4 "mtech/led4"
 
 char str_hum_data[10];
 char str_temp_data[10];
@@ -179,8 +179,8 @@ void loop() {
     lastMsg = now;
     Serial.print("Publish message: ");
     Serial.print("Temperature - "); Serial.println(str_temp_data);
-    client.publish("ali/fainur/temp", str_temp_data);
+    client.publish("mtech/temp", str_temp_data);
     Serial.print("Humidity - "); Serial.println(str_hum_data);
-    client.publish("ali/fainur/hum", str_hum_data);
+    client.publish("mtech/hum", str_hum_data);
   }
 }
