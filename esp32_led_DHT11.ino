@@ -171,15 +171,16 @@ void loop() {
   unsigned long now = millis();
   if (now - lastMsg > 2000) {
     float hum_data = dht.readHumidity();
-    Serial.println(hum_data);
     /* 4 is mininum width, 2 is precision; float value is copied onto str_sensor*/
     dtostrf(hum_data, 4, 2, str_hum_data);
     float temp_data = dht.readTemperature(); // or dht.readTemperature(true) for Fahrenheit
     dtostrf(temp_data, 4, 2, str_temp_data);
     lastMsg = now;
-    Serial.print("Publish message: ");
-    Serial.print("Temperature - "); Serial.println(str_temp_data);
+    Serial.println(" ");
+    Serial.println("Publish message: ");
+    Serial.print("Temperature - "); Serial.print(str_temp_data);
     client.publish("mtech/temp", str_temp_data);
+    Serial.print(" ");
     Serial.print("Humidity - "); Serial.println(str_hum_data);
     client.publish("mtech/hum", str_hum_data);
   }
