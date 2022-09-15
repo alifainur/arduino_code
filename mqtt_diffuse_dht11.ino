@@ -1,7 +1,7 @@
 #include <WiFi.h>
 #include <PubSubClient.h>
 #include "DHT.h"
-#define DHT11PIN 33
+#define DHT11PIN 19
 
 const int sensorPin = 23;
 int sensorState = 0;
@@ -26,7 +26,7 @@ void setup_wifi() {
     WiFi.begin(ssid, password);
     while (WiFi.status() != WL_CONNECTED) 
     {
-      delay(500);
+      delay(5000);
       Serial.print(".");
     }
   randomSeed(micros());
