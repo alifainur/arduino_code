@@ -12,7 +12,7 @@ char str_temp_data[10];
 
 const char* ssid = "iot_class";
 const char* password = "classiot123";
-const char* mqtt_server = "192.168.0.7";
+const char* mqtt_server = "broker.hivemq.com";
 
 WiFiClient espClient;
 PubSubClient client(espClient);
