@@ -38,7 +38,7 @@ void task1(void * parameters){
 void task2(void * parameters){
   for(;;){
     Serial.print("Task 2 Count: ");
-    Serial.println(count2++);
+    Serial.println(count2+=3);
     vTaskDelay(1000 / portTICK_PERIOD_MS);
   }
 }
