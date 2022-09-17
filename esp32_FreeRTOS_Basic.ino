@@ -4,23 +4,8 @@ int count2 = 0;
 void setup() {
   Serial.begin(115200);
 
-  xTaskCreate(
-    task1,
-    "Task 1",
-    1000,
-    NULL,
-    1,
-    NULL
-  );
-
-  xTaskCreate(
-    task2,
-    "Task 2",
-    1000,
-    NULL,
-    1,
-    NULL
-  );
+  xTaskCreate(task1, "Task 1", 1000, NULL, 1, NULL);
+  xTaskCreate(task2, "Task 2", 1000, NULL, 1, NULL);
 }
 
 void loop() {
