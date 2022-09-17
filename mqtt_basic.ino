@@ -8,19 +8,6 @@
 WiFiClient espClient;
 PubSubClient client(espClient);
 
-void setup() {
-  Serial.begin(115200);
-  connectToWiFi();
-  client.setServer(mqtt_server, 1883);
-}
-
-void loop() {
-  if (!client.connected()) {
-    reconnect();
-  }
-  client.loop(); 
-}
-
 void connectToWiFi(){
   Serial.print("Connecting to WiFi");
   WiFi.mode(WIFI_STA);
@@ -43,4 +30,17 @@ void reconnect() {
       delay(1000);
     }
   }
+}
+
+void setup() {
+  Serial.begin(115200);
+  connectToWiFi();
+  client.setServer(mqtt_server, 1883);
+}
+
+void loop() {
+  if (!client.connected()) {
+    reconnect();
+  }
+  client.loop(); 
 }
