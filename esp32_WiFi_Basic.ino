@@ -3,6 +3,13 @@
 #define SSID "iot_class"
 #define PASS "classiot123"
 
+void setup() {
+  Serial.begin(115200);
+  connectToWiFi();
+}
+
+void loop() {}
+
 void connectToWiFi(){
   Serial.print("Connecting to WiFi");
   WiFi.mode(WIFI_STA);
@@ -14,10 +21,3 @@ void connectToWiFi(){
   }
   Serial.println("Connected to WiFi");
 }
-
-void setup() {
-  Serial.begin(115200);
-  connectToWiFi();
-}
-
-void loop() {}
