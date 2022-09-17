@@ -1,7 +1,7 @@
 #include <WiFi.h>
 
-#define SSID "iot_class"
-#define PASS "classiot123"
+#define ssid "iot_class"
+#define password "classiot123"
 
 void setup() {
   Serial.begin(115200);
@@ -22,11 +22,11 @@ void loop() {}
 void connectToWiFi(){
   Serial.print("Connecting to WiFi");
   WiFi.mode(WIFI_STA);
-  WiFi.begin(SSID, PASS);
+  WiFi.begin(ssid, password);
 
   while(WiFi.status() != WL_CONNECTED){
     Serial.print(".");
-    delay(100);
+    delay(500);
   }
   Serial.println("Connected to WiFi");
 }
