@@ -1,5 +1,5 @@
 #include "DHT.h"
-DHT dht(4, DHT11);
+DHT dht(19, DHT11);
 
 void setup() {
   Serial.begin(115200);
