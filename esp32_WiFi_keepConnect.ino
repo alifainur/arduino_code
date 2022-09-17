@@ -3,14 +3,6 @@
 #define ssid "iot_class"
 #define password "classiot123"
 
-void setup() {
-  Serial.begin(115200);
-  connectToWiFi();
-  xTaskCreatePinnedToCore(keepWiFiAlive, "Keep WiFi Alive", 5000, NULL, 1, NULL, CONFIG_ARDUINO_RUNNING_CORE);
-}
-
-void loop() {}
-
 void connectToWiFi(){
   Serial.print("Connecting to WiFi");
   WiFi.mode(WIFI_STA);
@@ -33,3 +25,11 @@ void keepWiFiAlive(void * parameters){
     connectToWiFi();
   }
 }
+
+void setup() {
+  Serial.begin(115200);
+  connectToWiFi();
+  xTaskCreatePinnedToCore(keepWiFiAlive, "Keep WiFi Alive", 5000, NULL, 1, NULL, CONFIG_ARDUINO_RUNNING_CORE);
+}
+
+void loop() {}
