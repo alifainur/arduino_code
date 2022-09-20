@@ -1,6 +1,7 @@
-int count1 = 0;
-int count2 = 0;
+int count1 = 0; // mulakan variable count1 dengan nilai 0
+int count2 = 0; // mulakan variable count2 dengan nilai 0
 
+// Task pertama bermula di sini
 void task1(void * parameters){
   for(;;){
     Serial.print("Task 1 Count: ");
@@ -9,6 +10,7 @@ void task1(void * parameters){
   }
 }
 
+// Task kedua bermula di sini
 void task2(void * parameters){
   for(;;){
     Serial.print("Task 2 Count: ");
@@ -19,7 +21,7 @@ void task2(void * parameters){
 
 void setup() {
   Serial.begin(115200);
-
+// create task(task function, task name, stack size, parameter, priority, task handle, pin task to core)
   xTaskCreate(task1, "Task 1", 1000, NULL, 1, NULL);
   xTaskCreate(task2, "Task 2", 1000, NULL, 1, NULL);
 }
