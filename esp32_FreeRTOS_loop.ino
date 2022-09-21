@@ -21,5 +21,5 @@ void setup() {
 void loop() {
   Serial.printf("led2 Core#%i \n", xPortGetCoreID());
   digitalWrite(led2, !digitalRead(led2));
-  delay(1000);
+  delay(200);
 }
