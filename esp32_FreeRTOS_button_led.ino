@@ -1,6 +1,6 @@
-int pushButton = 13;
-int blueLED = 2;
-int redLED = 4;
+int pushButton = 23;
+int blueLED = 19;
+int redLED = 18;
 
 TaskHandle_t Task1;
 
@@ -9,9 +9,6 @@ void loop2( void * parameter )
   for (;;) {
     // write you code for 2nd loop here to run endlessly
     int buttonState =  digitalRead(pushButton);
-    buttonState = !buttonState; 
-    // my button was connected through INPUT_PULLUP to GND
-    // so I had to inverse the buttonState i.e 0 = 1 and 1 = 0
     if(buttonState == 1){
     Serial.print("            Core#");
     Serial.print(xPortGetCoreID());
@@ -24,7 +21,7 @@ void loop2( void * parameter )
 
 void setup() {
   Serial.begin(115200);
-  pinMode(pushButton, INPUT_PULLUP);
+  pinMode(pushButton, INPUT);
   pinMode(blueLED, OUTPUT);
   pinMode(redLED, OUTPUT);
   
