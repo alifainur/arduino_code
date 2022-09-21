@@ -1,6 +1,6 @@
 #include <WiFi.h>
 
-#define ssid "iot_class"
+#define ssid "iotclass@unifi"
 #define password "classiot123"
 
 void connectToWiFi(){
