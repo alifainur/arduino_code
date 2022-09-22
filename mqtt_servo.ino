@@ -1,0 +1,102 @@
+#include <WiFi.h>
+#include <PubSubClient.h>
+#include <ESP32Servo.h>
+Servo weeekly;
+
+// Paramètre WiFi, MQTT - WiFi, MQTT parameters
+const char* ssid = "yourSSID";                // WiFi SSID
+const char* password = "yourPASSWORD";        // WiFi Password
+const char* mqtt_server = "xxx.xxx.xxx.xxx";  // IP Broker MQTT
+const char* topic_weeekly = "servo/weeekly";          // Topic MQTT pour servo weeekly - Topic MQTT for weeekly servo
+ 
+WiFiClient espClient;
+PubSubClient client(espClient);
+long lastMsg = 0;
+char msg[50];
+int value = 0;
+
+void setup_wifi() {
+  delay(10);
+  // We start by connecting to a WiFi network
+  Serial.println();
+  Serial.print("Connecting to ");
+  Serial.println(ssid);
+
+  WiFi.begin(ssid, password);
+
+  while (WiFi.status() != WL_CONNECTED) {
+    delay(500);
+    Serial.print(".");
+  }
+
+  Serial.println("");
+  Serial.println("WiFi connected");
+  Serial.println("IP address: ");
+  Serial.println(WiFi.localIP());
+}
+
+void callback(char* topic, byte* payload, unsigned int length) {
+ String string;
+ // Affiche le topic entrant - display incoming Topic
+ Serial.print("Message arrived [");
+ Serial.print(topic);
+ Serial.print("] ");
+ // décode le message - decode payload message
+ for (int i = 0; i < length; i++) {
+ string+=((char)payload[i]); 
+ }
+ // Affiche le message entrant - display incoming message
+ Serial.print(string);
+ Serial.print(" toInt ");
+ // Conversion de la position en entier - convert position as an Integer
+ int pos = string.toInt(); 
+ Serial.println(pos);
+
+ // Détermine quel servo doit être bougé - Determines which servo should be moved
+ if ( strcmp(topic, topic_weeekly) == 0 ) {
+ Serial.print("Move weeekly to ");
+ Serial.println(pos);
+ weeekly.write(pos); 
+ }
+ if ( strcmp(topic, topic_tilt) == 0 ) {
+ Serial.print("Move Tilt to ");
+ Serial.println(pos);
+ tilt.write(pos); 
+ }
+ delay(15); 
+}
+
+void reconnect() {
+  // Loop until we're reconnected
+  while (!client.connected()) {
+    Serial.print("Attempting MQTT connection...");
+    // Attempt to connect
+    if (client.connect("ESP8266Client")) {
+      Serial.println("connected");
+      client.subscribe(topic_weeekly); 
+      client.subscribe(topic_tilt); 
+    } else {
+      Serial.print("failed, rc=");
+      Serial.print(client.state());
+      Serial.println(" try again in 5 seconds");
+      // Wait 5 seconds before retrying
+      delay(5000);
+    }
+  }
+}
+
+void setup() {
+  Serial.begin(115200);
+  weeekly.attach(12,500,2500);
+  setup_wifi();
+  client.setServer(mqtt_server, 1883);
+  client.setCallback(callback);
+}
+
+void loop() {   
+  if (!client.connected()) {
+    reconnect();
+  }
+  client.loop();
+  delay(100);
+}
