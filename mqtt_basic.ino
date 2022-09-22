@@ -1,7 +1,7 @@
 #include <WiFi.h>
 #include <PubSubClient.h>
 
-#define ssid "iot_class"
+#define ssid "iotclass@unifi"
 #define password "classiot123"
 #define mqtt_server "broker.hivemq.com"
 
