@@ -1,7 +1,7 @@
 #include <WiFi.h>
 
-#define ssid "iotclass@unifi"
-#define password "classiot123"
+#define ssid "yourSSID"
+#define password "yourPASSWORD"
 
 void connectToWiFi(){
   Serial.print("Connecting to WiFi");
