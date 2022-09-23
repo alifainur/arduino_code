@@ -3,10 +3,10 @@
 #include <ESP32Servo.h>
 #include <DHT.h>
 
-const char* ssid = "iotclass@unifi";
-const char* password = "classiot123";
-const char* mqtt_server = "192.168.0.215";
-const char* topic_weeekly = "servo/weeekly";
+const char* ssid = "yourSSID";
+const char* password = "yourPASSWORD";
+const char* mqtt_server = "xxx.xxx.xxx.xxx";
+const char* topic_weeekly = "servo/mtech/mtech/college";
 
 Servo weeekly;
 
@@ -64,7 +64,7 @@ void reconnect() {
   while (!client.connected()) {
     Serial.print("Attempting MQTT connection...");
     // Attempt to connect
-    if (client.connect("ESP32alifainur")) {
+    if (client.connect("ESP32Client")) {
       Serial.println("connected");
       client.subscribe(topic_weeekly);
     } else {
