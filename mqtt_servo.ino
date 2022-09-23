@@ -58,11 +58,6 @@ void callback(char* topic, byte* payload, unsigned int length) {
  Serial.println(pos);
  weeekly.write(pos); 
  }
- if ( strcmp(topic, topic_tilt) == 0 ) {
- Serial.print("Move Tilt to ");
- Serial.println(pos);
- tilt.write(pos); 
- }
  delay(15); 
 }
 
@@ -74,7 +69,6 @@ void reconnect() {
     if (client.connect("ESP8266Client")) {
       Serial.println("connected");
       client.subscribe(topic_weeekly); 
-      client.subscribe(topic_tilt); 
     } else {
       Serial.print("failed, rc=");
       Serial.print(client.state());
