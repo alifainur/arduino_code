@@ -1,4 +1,4 @@
-#include "DHT.h"
+#include <DHT.h>
 #define DHT11PIN 33 //jgn guna 34,35,36,39
 
 DHT dht(DHT11PIN, DHT11);
