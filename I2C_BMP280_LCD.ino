@@ -39,7 +39,8 @@ void loop() {
   lcd.setCursor(7, 0);
   lcd.print(bmp.readTemperature());
   lcd.setCursor(12, 0);
-  lcd.println(" °C");
+  lcd.write(0xDF);
+  lcd.print("C");
   delay(1000);
   lcd.clear();
 
