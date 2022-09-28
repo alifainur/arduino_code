@@ -1,9 +1,9 @@
 #include <ESP8266WiFi.h>
 #include <PubSubClient.h>
 
-const char* ssid = "iot";
-const char* password = "classiot123";
-const char* mqtt_server = "192.168.0.200";
+const char* ssid = "yourSSID";
+const char* password = "yourPASSWORD";
+const char* mqtt_broker = "broker.hivemq.com";
 
 WiFiClient espClient;
 PubSubClient client(espClient);
@@ -138,7 +138,7 @@ void setup() {
   digitalWrite(D7,HIGH);
   Serial.begin(115200);
   setup_wifi();
-  client.setServer(mqtt_server, 1883);
+  client.setServer(mqtt_broker, 1883);
   client.setCallback(callback);
 }
 
