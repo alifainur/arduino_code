@@ -16,11 +16,11 @@ Serial.println(inputValue);
     digitalWrite(led1, HIGH);
     digitalWrite(led2, LOW);
   }
-  if ((inputValue >= 501) && (inputValue <= 1199)) {
+  if (inputValue >= 501 && inputValue <= 119) {
     digitalWrite(led1, LOW);
     digitalWrite(led2, LOW);
   }
-  if ((inputValue >= 1200) && (inputValue <= 1700)) {
+  if (inputValue >= 1200 && inputValue <= 1700) {
     digitalWrite(led1, LOW);
     digitalWrite(led2, HIGH);
   }
