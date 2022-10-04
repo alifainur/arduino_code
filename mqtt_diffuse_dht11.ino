@@ -10,8 +10,8 @@ DHT dht(DHT11PIN, DHT11);
 char str_hum_data[10];
 char str_temp_data[10];
 
-const char* ssid = "iot_class";
-const char* password = "classiot123";
+const char* ssid = "yourSSID";
+const char* password = "yourPASSWORD";
 const char* mqtt_server = "broker.hivemq.com";
 
 WiFiClient espClient;
