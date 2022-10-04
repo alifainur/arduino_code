@@ -17,9 +17,9 @@
 DHT dht(DHTPIN, DHTTYPE);
 
 // Masukkan maklumat berikut sesuai network anda.
-const char* ssid = "iot_class";
-const char* password = "classiot123";
-const char* mqtt_server = "192.168.0.7";  // alamat IP bagi Raspberry Pi4
+const char* ssid = "yourSSID";
+const char* password = "yourPASSWORD";
+const char* mqtt_server = "broker.hivemq.com";
 
 // Menamakan topik, pastikan guna nama sendiri
 #define sub1 "mtech/led1"
