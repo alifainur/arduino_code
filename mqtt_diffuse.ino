@@ -3,9 +3,9 @@
 
 const int sensorPin = 23;
 int sensorState = 0;
-const char* ssid = "iot_class";
-const char* password = "classiot123";
-const char* mqtt_server = "192.168.0.7";
+const char* ssid = "yourSSID";
+const char* password = "yourPASSWORD";
+const char* mqtt_server = "broker.hivemq.com";
 //const char* mqtt_server = "broker.mqttdashboard.com";
 //const char* mqtt_server = "iot.eclipse.org";
 
