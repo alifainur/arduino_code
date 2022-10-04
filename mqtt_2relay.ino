@@ -2,8 +2,8 @@
 #include <PubSubClient.h>
 
 // Replace the next variables with your SSID/Password combination
-const char* ssid = "iot_class";
-const char* password = "classiot123";
+const char* ssid = "yourSSID";
+const char* password = "yourPASSWORD";
 const char* mqtt_server = "broker.hivemq.com";
 
 WiFiClient espClient;
