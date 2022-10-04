@@ -3,8 +3,8 @@
 #include <ESP32Servo.h>
 #include <DHT.h>
 
-const char* ssid = "iotclass@unifi";
-const char* password = "classiot123";
+const char* ssid = "yourSSID";
+const char* password = "yourPASSWORD";
 const char* mqtt_server = "broker.hivemq.com";
 // List all the topic at mqtt here
 const char* topicServo = "servo/weeekly";
