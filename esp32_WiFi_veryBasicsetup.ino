@@ -1,5 +1,5 @@
 #include <WiFi.h>
- 
+
 void setup() {
   Serial.begin(115200);
   Serial.print("Connecting to WiFi");
@@ -8,7 +8,7 @@ void setup() {
     Serial.print(".");
     delay(500);
   }
-   Serial.println("Connected to the WiFi");
- }
- 
+  Serial.println("Connected to the WiFi");
+}
+
 void loop() {}
