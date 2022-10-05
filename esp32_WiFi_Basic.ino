@@ -6,11 +6,11 @@
 void connectToWiFi(){
   Serial.print("Connecting to WiFi");
   WiFi.mode(WIFI_STA);
-  WiFi.begin(ssid, password);
+  WiFi.begin(SSID, PASS);
 
   while(WiFi.status() != WL_CONNECTED){
     Serial.print(".");
-    delay(500);
+    delay(100);
   }
   Serial.println("Connected to WiFi");
 }
