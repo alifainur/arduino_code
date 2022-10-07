@@ -1,5 +1,5 @@
 #include <DHT.h>
-DHT dht(19, DHT11);
+DHT dht(0, DHT11);
 
 void setup() {
   Serial.begin(115200);
@@ -8,7 +8,5 @@ void setup() {
 
 void loop() {
   delay(1000);
-  Serial.printf(("Temperature: %.2f°C \t Humidity: %.2f%% \n"),
-  dht.readTemperature(),
-  dht.readHumidity());
+  Serial.printf(("Temperature: %.2f°C \t Humidity: %.2f%%\n"), dht.readTemperature(), dht.readHumidity());
 }
