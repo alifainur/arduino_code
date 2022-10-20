@@ -8,7 +8,7 @@ int sensorState = 0;
 
 TaskHandle_t Task1;
 
-void loop2( void * parameter ){
+void loop2( void * parameters ){
   for (;;) {
     delay(1000);
     float humi = dht.readHumidity();
