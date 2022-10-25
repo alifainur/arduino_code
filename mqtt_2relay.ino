@@ -64,15 +64,15 @@ void callback(char* topic, byte* message, unsigned int length) {
       Serial.println("relay1 to on");
       digitalWrite(relay1, LOW);
     }
-    else if(messageTemp == "1off"){
+    if(messageTemp == "1off"){
       Serial.println("relay1 to off");
       digitalWrite(relay1, HIGH);
     }
-    else if(messageTemp == "2on"){
+    if(messageTemp == "2on"){
       Serial.println("relay2 to on");
       digitalWrite(relay2, LOW);
     }
-    else if(messageTemp == "2off"){
+    if(messageTemp == "2off"){
       Serial.println("relay2 to off");
       digitalWrite(relay2, HIGH);
     }
