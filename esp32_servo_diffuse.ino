@@ -15,11 +15,11 @@ void loop() {
   if (sensorState == LOW){ // buat perbandingan jika sama dengan LOW
     weeekly.write(0); // suruh servo gerak 0°
     Serial.println("Gate Open");
-    delay(1000);
+    delay(200);
   }else{
     weeekly.write(180); // suruh servo gerak 180°
     Serial.println("Gate Close");
-    delay(1000);
+    delay(200);
   }
   delay(50);
 }
