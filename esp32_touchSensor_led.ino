@@ -1,10 +1,10 @@
 const int touchPin = 4; 
-const int ledPin = 32;
+const int ledPin = 18;
 const int threshold = 40;
 int touchValue;
 
 void setup(){
-  Serial.begin(115200);
+  Serial.begin(9600);
   pinMode (ledPin, OUTPUT);
 }
 
