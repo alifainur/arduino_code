@@ -3,13 +3,13 @@
 #include <DHT.h>
 
 // Menamakan pin led atau relay
-#define led1            18
-#define led2            19
-#define led3            23
-#define led4            5
+#define led1            2
+#define led2            18
+#define led3            19
+#define led4            21
 
 // Menamakan pin 34 sebagai masukan DHT11
-#define DHTPIN            34
+#define DHTPIN            33
 
 // Menggunakan sensor DHT11
 #define DHTTYPE DHT11
@@ -154,7 +154,7 @@ void setup() {
   pinMode(led2, OUTPUT);
   pinMode(led3, OUTPUT);
   pinMode(led4, OUTPUT);
-  Serial.begin(115200);
+  Serial.begin(9600);
   dht.begin();
   setup_wifi();
   client.setServer(mqtt_server, 1883);
