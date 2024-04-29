@@ -1,6 +1,6 @@
 const int ledPin1 = 18;
 const int ledPin2 = 19;
-const int ledPin3 = 21;
+const int ledPin3 = 2;
 
 TaskHandle_t Task1_handle;
 TaskHandle_t Task2_handle;
