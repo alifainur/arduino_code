@@ -1,4 +1,4 @@
-int pushButton = 23;
+int pushButton = 26;
 int blueLED = 19;
 int redLED = 18;
 
