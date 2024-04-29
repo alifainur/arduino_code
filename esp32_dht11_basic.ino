@@ -5,7 +5,7 @@ DHT dht(DHT11PIN, DHT11);
 void setup()
 {
   
-  Serial.begin(115200);
+  Serial.begin(9600);
 /* Start the DHT11 Sensor */
   dht.begin();
 }
