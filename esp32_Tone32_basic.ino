@@ -1,8 +1,8 @@
-const int pin = 16;
+const int passiveBuzzer = 16;
 const int chan = 0;
 
 void setup() {
-  ledcAttachPin(pin,chan);
+  ledcAttachPin(passiveBuzzer,chan);
 }
 
 void loop() {
