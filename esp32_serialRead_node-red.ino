@@ -1,5 +1,5 @@
 #include <DHT.h>
-#define DHT11PIN 32 //jgn guna 34,35,36,39
+#define DHT11PIN 33 //jgn guna 34,35,36,39
 
 DHT dht(DHT11PIN, DHT11);
 
@@ -9,7 +9,7 @@ char humi[10];
 void setup()
 {
   
-  Serial.begin(115200);
+  Serial.begin(9600);
 /* Start the DHT11 Sensor */
   dht.begin();
 }
