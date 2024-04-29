@@ -1,8 +1,8 @@
 #include <DHT.h>
-DHT dht(0, DHT11);
+DHT dht(33, DHT11); // pin, jenis DHT.
 
 void setup() {
-  Serial.begin(115200);
+  Serial.begin(9600);
   dht.begin();
 }
 
