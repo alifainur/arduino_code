@@ -6,7 +6,7 @@
 #define password "yourPASSWORD"
 #define mqtt_server "broker.hivemq.com"
 
-DHT dht(32, DHT11);
+DHT dht(33, DHT11);
 char temp[10];
 char humi[10];
 
@@ -38,7 +38,7 @@ void reconnect() {
 }
 
 void setup() {
-  Serial.begin(115200);
+  Serial.begin(9600);
   connectToWiFi();
   client.setServer(mqtt_server, 1883);
   dht.begin();
