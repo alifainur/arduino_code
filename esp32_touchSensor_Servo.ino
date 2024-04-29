@@ -1,6 +1,6 @@
 #include <ESP32Servo.h>
 Servo myservo;  // create servo object
-const int touchPin1 = 12;
+const int touchPin1 = 4;
 const int touchPin2 = 13;
 const int touchPin3 = 14;
 
