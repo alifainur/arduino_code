@@ -10,7 +10,7 @@ const char* topic_weeekly = "servo/mtech/mtech/college";
 
 Servo weeekly;
 
-DHT dht(32, DHT11);
+DHT dht(33, DHT11);
 char temp[10];
 char humi[10];
 
@@ -104,7 +104,7 @@ void callback(char* topic, byte* payload, unsigned int length) {
 }
 
 void setup() {
-  Serial.begin(115200);
+  Serial.begin(9600);
   weeekly.attach(12, 500, 2500);
   dht.begin();
   setup_wifi();
