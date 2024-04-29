@@ -12,12 +12,12 @@ WiFiServer server(80);
 String header;
 
 // Auxiliar variables to store the current output state
-String output26State = "off";
-String output27State = "off";
+String output21State = "off";
+String output22State = "off";
 
 // Assign output variables to GPIO pins
-const int output26 = 26;
-const int output27 = 27;
+const int output21 = 21;
+const int output22 = 22;
 
 // Current time
 unsigned long currentTime = millis();
@@ -29,11 +29,11 @@ const long timeoutTime = 2000;
 void setup() {
   Serial.begin(9600);
   // Initialize the output variables as outputs
-  pinMode(output26, OUTPUT);
-  pinMode(output27, OUTPUT);
+  pinMode(output21, OUTPUT);
+  pinMode(output22, OUTPUT);
   // Set outputs to LOW
-  digitalWrite(output26, LOW);
-  digitalWrite(output27, LOW);
+  digitalWrite(output21, LOW);
+  digitalWrite(output22, LOW);
 
   // Connect to Wi-Fi network with SSID and password
   Serial.print("Connecting to ");
@@ -77,22 +77,22 @@ void loop(){
             client.println();
             
             // turns the GPIOs on and off
-            if (header.indexOf("GET /26/on") >= 0) {
-              Serial.println("GPIO 26 on");
-              output26State = "on";
-              digitalWrite(output26, HIGH);
-            } else if (header.indexOf("GET /26/off") >= 0) {
-              Serial.println("GPIO 26 off");
-              output26State = "off";
-              digitalWrite(output26, LOW);
-            } else if (header.indexOf("GET /27/on") >= 0) {
-              Serial.println("GPIO 27 on");
-              output27State = "on";
-              digitalWrite(output27, HIGH);
-            } else if (header.indexOf("GET /27/off") >= 0) {
-              Serial.println("GPIO 27 off");
-              output27State = "off";
-              digitalWrite(output27, LOW);
+            if (header.indexOf("GET /21/on") >= 0) {
+              Serial.println("GPIO 21 on");
+              output21State = "on";
+              digitalWrite(output21, HIGH);
+            } else if (header.indexOf("GET /21/off") >= 0) {
+              Serial.println("GPIO 21 off");
+              output21State = "off";
+              digitalWrite(output21, LOW);
+            } else if (header.indexOf("GET /22/on") >= 0) {
+              Serial.println("GPIO 22 on");
+              output22State = "on";
+              digitalWrite(output22, HIGH);
+            } else if (header.indexOf("GET /22/off") >= 0) {
+              Serial.println("GPIO 22 off");
+              output22State = "off";
+              digitalWrite(output22, LOW);
             }
             
             // Display the HTML web page
@@ -110,21 +110,21 @@ void loop(){
             client.println("<body><h1>ESP32 Web Server</h1>");
             
             // Display current state, and ON/OFF buttons for GPIO 26  
-            client.println("<p>GPIO 26 - State " + output26State + "</p>");
+            client.println("<p>GPIO 21 - State " + output21State + "</p>");
             // If the output26State is off, it displays the ON button       
-            if (output26State=="off") {
-              client.println("<p><a href=\"/26/on\"><button class=\"button\">ON</button></a></p>");
+            if (output21State=="off") {
+              client.println("<p><a href=\"/21/on\"><button class=\"button\">ON</button></a></p>");
             } else {
-              client.println("<p><a href=\"/26/off\"><button class=\"button button2\">OFF</button></a></p>");
+              client.println("<p><a href=\"/21/off\"><button class=\"button button2\">OFF</button></a></p>");
             } 
                
             // Display current state, and ON/OFF buttons for GPIO 27  
-            client.println("<p>GPIO 27 - State " + output27State + "</p>");
+            client.println("<p>GPIO 22 - State " + output22State + "</p>");
             // If the output27State is off, it displays the ON button       
-            if (output27State=="off") {
-              client.println("<p><a href=\"/27/on\"><button class=\"button\">ON</button></a></p>");
+            if (output22State=="off") {
+              client.println("<p><a href=\"/22/on\"><button class=\"button\">ON</button></a></p>");
             } else {
-              client.println("<p><a href=\"/27/off\"><button class=\"button button2\">OFF</button></a></p>");
+              client.println("<p><a href=\"/272/off\"><button class=\"button button2\">OFF</button></a></p>");
             }
             client.println("</body></html>");
             
