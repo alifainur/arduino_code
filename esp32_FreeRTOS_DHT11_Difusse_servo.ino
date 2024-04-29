@@ -1,6 +1,6 @@
 #include <ESP32Servo.h>
 #include <DHT.h>
-DHT dht(32, DHT11);
+DHT dht(33, DHT11);
 Servo weeekly;
 
 const int diffuseSensor = 13;
@@ -24,7 +24,7 @@ void loop2( void * parameters ){
 void setup() {
   weeekly.attach(12,500,2500);
   pinMode(diffuseSensor,INPUT);
-  Serial.begin(115200);
+  Serial.begin(9600);
   dht.begin();
 
   xTaskCreatePinnedToCore(loop2, "dht11", 5000, NULL, 1, &Task1, 0);
