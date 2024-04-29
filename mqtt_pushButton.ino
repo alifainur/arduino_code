@@ -1,7 +1,7 @@
 #include <WiFi.h>
 #include <PubSubClient.h>
 
-const int buttonPin = 23;
+const int buttonPin = 26;
 int buttonState = 0;
 const char* ssid = "yourSSID";
 const char* password = "yourPASSWORD";
@@ -64,7 +64,7 @@ void reconnect() {
 } //end reconnect()
 
 void setup() {
-  Serial.begin(115200);
+  Serial.begin(9600);
   setup_wifi();
   client.setServer(mqtt_server, 1883);
   client.setCallback(callback);
