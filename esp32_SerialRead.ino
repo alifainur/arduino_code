@@ -1,8 +1,8 @@
-const int relay1 = 18;
-const int relay2 = 19;
+const int relay1 = 19;
+const int relay2 = 21;
 
 void setup() {
-  Serial.begin(115200);
+  Serial.begin(9600);
   pinMode(relay1, OUTPUT);
   pinMode(relay2, OUTPUT);
 }
