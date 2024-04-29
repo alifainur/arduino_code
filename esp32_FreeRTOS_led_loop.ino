@@ -1,5 +1,5 @@
 const int led1 = 19;
-const int led2 = 23;
+const int led2 = 18;
 
 TaskHandle_t Task1_handle;
 
@@ -12,7 +12,7 @@ void task1(void * parameters){
 }
 
 void setup() {
-  Serial.begin(115200);
+  Serial.begin(9600);
   pinMode(led1, OUTPUT);
   pinMode(led2, OUTPUT);
   xTaskCreatePinnedToCore(task1, "Task 1", 5000, NULL, 1, &Task1_handle, 0);
