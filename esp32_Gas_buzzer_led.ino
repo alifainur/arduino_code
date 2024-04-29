@@ -1,6 +1,6 @@
 int redLed = 19;
 int greenLed = 18;
-int buzzer = 23;
+int buzzer = 16;
 int gasSensor = 4;
 // Your threshold value
 int sensorThres = 400;
@@ -10,7 +10,7 @@ void setup() {
   pinMode(greenLed, OUTPUT);
   pinMode(buzzer, OUTPUT);
   pinMode(gasSensor, INPUT);
-  Serial.begin(115200);
+  Serial.begin(9600);
 }
 
 void loop() {
