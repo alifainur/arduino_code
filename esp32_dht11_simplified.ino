@@ -1,8 +1,8 @@
 #include <DHT.h>
-DHT dht(32, DHT11);
+DHT dht(33, DHT11);
 
 void setup() {
-  Serial.begin(115200);
+  Serial.begin(9600);
   dht.begin();
 }
 
