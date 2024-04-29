@@ -1,4 +1,4 @@
-const int buzzer = 23;
+const int buzzer = 16;
 const int gasSensor = 4;
 // Your threshold value
 const int sensorThres = 400;
@@ -7,7 +7,7 @@ const int chan = 0;
 void setup() {
   pinMode(buzzer, OUTPUT);
   pinMode(gasSensor, INPUT);
-  Serial.begin(115200);
+  Serial.begin(9600);
 }
 
 void loop() {
