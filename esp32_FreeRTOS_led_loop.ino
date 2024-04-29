@@ -1,5 +1,5 @@
-const int led1 = 19;
-const int led2 = 18;
+const int led1 = 18;
+const int led2 = 19;
 
 TaskHandle_t Task1_handle;
 
