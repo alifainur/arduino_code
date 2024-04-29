@@ -1,6 +1,6 @@
 #include <OneWire.h>
 #include <DallasTemperature.h>
-const int tempSensor = 26;  //GPIO used for sensor
+const int tempSensor = 27;  //GPIO used for sensor
 OneWire oneWire(tempSensor); //Set Communication
 DallasTemperature sensors(&oneWire); //Pass OneWire to Dallas
 
