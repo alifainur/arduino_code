@@ -2,7 +2,7 @@ const int analog_ip = 4;
 int inputValue = 0;
 
 void setup() {
-  Serial.begin(115200);
+  Serial.begin(9600);
 }
 
 void loop() {
