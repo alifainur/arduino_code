@@ -1,8 +1,8 @@
 #include <ESP32Servo.h>
 Servo myservo;  // create servo object
 const int touchPin1 = 4;
-const int touchPin2 = 13;
-const int touchPin3 = 14;
+const int touchPin2 = 14;
+const int touchPin3 = 15;
 
 void setup(){
 myservo.attach(23,500,2500);  // (pin, min, max)
