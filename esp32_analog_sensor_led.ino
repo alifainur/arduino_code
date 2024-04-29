@@ -4,7 +4,7 @@ const int led2 = 19;
 int inputValue = 0;
 
 void setup() {
-  Serial.begin(115200);
+  Serial.begin(9600);
   pinMode(led1, OUTPUT);
   pinMode(led2, OUTPUT);
 }
