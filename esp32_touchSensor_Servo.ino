@@ -5,7 +5,7 @@ const int touchPin2 = 14;
 const int touchPin3 = 15;
 
 void setup(){
-myservo.attach(23,500,2500);  // (pin, min, max)
+myservo.attach(12,500,2500);  // (pin, min, max)
 }
 
 void loop(){
