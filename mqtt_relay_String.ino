@@ -74,11 +74,11 @@ void reconnect(){
 }
 
 void setup() {
-Serial.begin(115200);
+Serial.begin(9600);
 pinMode(2, OUTPUT);
 pinMode(18,OUTPUT);
 pinMode(19,OUTPUT);
-pinMode(23,OUTPUT);
+pinMode(21,OUTPUT);
 setup_wifi();
 client.setServer(mqtt_server, 1883);
 client.setCallback(callback);
