@@ -1,9 +1,9 @@
 #include <WiFi.h>
 #include <PubSubClient.h>
 #include "DHT.h"
-#define DHT11PIN 19
+#define DHT11PIN 33
 
-const int sensorPin = 23;
+const int sensorPin = 13;
 int sensorState = 0;
 DHT dht(DHT11PIN, DHT11);
 
@@ -68,7 +68,7 @@ void reconnect() {
 } //end reconnect()
 
 void setup() {
-  Serial.begin(115200);
+  Serial.begin(9600);
   setup_wifi();
   client.setServer(mqtt_server, 1883);
   client.setCallback(callback);
