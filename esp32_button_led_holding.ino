@@ -1,7 +1,7 @@
-const int ledPin = 23;
+const int ledPin = 18;
 int ledState = 0;
 
-const int buttonPin = 4;
+const int buttonPin = 23;
 int buttonNew;
 int buttonOld = 1;
 
