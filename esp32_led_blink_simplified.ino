@@ -1,4 +1,4 @@
-const int ledPin = 23; // ledPin refers to ESP32 GPIO 23
+const int ledPin = 18; // ledPin refers to ESP32 GPIO 23
 
 // the setup function runs once when you press reset or power the board
 void setup() {
