@@ -22,7 +22,7 @@ void task2(void * parameters){
 }
 
 void setup() {
-  Serial.begin(115200);
+  Serial.begin(9600);
 // create task then pinned to core(task function, task name, stack size, parameter, priority, task handle, pin task to core)
   xTaskCreatePinnedToCore(task1, "Task 1", 5000, NULL, 1, &Task1_handle, 0);
   xTaskCreatePinnedToCore(task2, "Task 2", 5000, NULL, 1, &Task2_handle, 1);
