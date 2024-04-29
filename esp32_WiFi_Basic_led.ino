@@ -1,7 +1,7 @@
 #include <WiFi.h>
 
-#define ssid "iotclass@unifi"
-#define password "classiot123"
+#define ssid "iotProject"
+#define password "iotProjectESP32"
 
 const int led_WiFi = 2;
 
@@ -20,7 +20,7 @@ void connectToWiFi(){
 
 void setup() {
   pinMode(led_WiFi, OUTPUT);
-  Serial.begin(115200);
+  Serial.begin(9600);
   connectToWiFi();
 }
 
