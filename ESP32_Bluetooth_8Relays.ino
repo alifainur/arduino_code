@@ -1,7 +1,6 @@
  /**********************************************************************************
  *  TITLE: Bluetooth + Manual (Switch) control 8 relays using ESP32.
  *  Download the libraries
- *  BluetoothSerial: https://github.com/espressif/arduino-esp32/tree/master/libraries/BluetoothSerial
  *  AceButton Library: https://github.com/bxparks/AceButton
  *  Install the libraries at Arduino IDE -> Sketch - Include Library -> Add Zip Library
 
