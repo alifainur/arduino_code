@@ -1,7 +1,7 @@
 #include <WiFi.h>
 
-#define ssid "iotProject"
-#define password "iotProjectESP32"
+#define ssid "yourSSID"
+#define password "yourPASSWORD"
 
 const int led_WiFi = 2;
 
