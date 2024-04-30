@@ -5,7 +5,7 @@ const int potPin = 4;
 int inputVal = 0;
 
 void setup() {
- Serial.begin(9600);
+ Serial.begin(115200);
  delay(1000);
 }
 
