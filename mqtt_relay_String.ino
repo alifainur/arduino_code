@@ -74,7 +74,7 @@ void reconnect(){
 }
 
 void setup() {
-Serial.begin(9600);
+Serial.begin(115200);
 pinMode(2, OUTPUT);
 pinMode(18,OUTPUT);
 pinMode(19,OUTPUT);
