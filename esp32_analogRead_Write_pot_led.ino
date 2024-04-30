@@ -6,7 +6,7 @@ const int ledChannel = 0;
 const int resolution = 8;
 
 void setup() {
- Serial.begin(9600);
+ Serial.begin(115200);
    ledcSetup(ledChannel, freq, resolution);
    ledcAttachPin(ledPin, ledChannel);
  delay(1000);
