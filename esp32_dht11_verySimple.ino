@@ -2,7 +2,7 @@
 DHT dht(33, DHT11); // pin, jenis DHT.
 
 void setup() {
-  Serial.begin(9600);
+  Serial.begin(115200);
   dht.begin();
 }
 
