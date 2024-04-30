@@ -2,7 +2,7 @@ const int relay1 = 21;
 const int relay2 = 22;
 
 void setup() {
-  Serial.begin(9600);
+  Serial.begin(115200);
   pinMode(relay1, OUTPUT);
   pinMode(relay2, OUTPUT);
 }
