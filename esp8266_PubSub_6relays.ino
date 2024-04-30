@@ -136,7 +136,7 @@ void setup() {
   digitalWrite(D5,HIGH);
   digitalWrite(D6,HIGH);
   digitalWrite(D7,HIGH);
-  Serial.begin(9600);
+  Serial.begin(115200);
   setup_wifi();
   client.setServer(mqtt_broker, 1883);
   client.setCallback(callback);
