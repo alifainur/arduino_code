@@ -5,7 +5,7 @@ OneWire oneWire(tempSensor); //Set Communication
 DallasTemperature sensors(&oneWire); //Pass OneWire to Dallas
 
 void setup() {
-  Serial.begin(9600);
+  Serial.begin(115200);
   sensors.begin();
 }
 
