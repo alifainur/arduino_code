@@ -9,7 +9,7 @@ char humi[10];
 void setup()
 {
   
-  Serial.begin(9600);
+  Serial.begin(115200);
 /* Start the DHT11 Sensor */
   dht.begin();
 }
