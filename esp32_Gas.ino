@@ -7,7 +7,7 @@ const int chan = 0;
 void setup() {
   pinMode(buzzer, OUTPUT);
   pinMode(gasSensor, INPUT);
-  Serial.begin(9600);
+  Serial.begin(115200);
 }
 
 void loop() {
