@@ -27,7 +27,7 @@ void keepWiFiAlive(void * parameters){
 }
 
 void setup() {
-  Serial.begin(9600);
+  Serial.begin(115200);
   connectToWiFi();
   xTaskCreatePinnedToCore(keepWiFiAlive, "Keep WiFi Alive", 5000, NULL, 1, NULL, CONFIG_ARDUINO_RUNNING_CORE);
 }
