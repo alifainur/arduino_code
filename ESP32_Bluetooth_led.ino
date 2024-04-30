@@ -17,7 +17,6 @@ const int ledPin = 18;
 // Handle received and sent messages
 String message = "";
 char incomingChar;
-String temperatureString = "";
 
 void setup() {
   pinMode(ledPin, OUTPUT);
@@ -27,7 +26,7 @@ void setup() {
 }
 
 void loop() {
-  // Read received messages (LED control command)
+  // Read received messages
   if (SerialBT.available()){
     char incomingChar = SerialBT.read();
     if (incomingChar != '\n'){
@@ -38,12 +37,16 @@ void loop() {
     }
     Serial.write(incomingChar);  
   }
+  
   // Check received message and control output accordingly
+  // kalau nak control servo sila ubah coding di bawah
   if (message =="led_on"){
     digitalWrite(ledPin, HIGH);
   }
   else if (message =="led_off"){
     digitalWrite(ledPin, LOW);
   }
+
+  
   delay(20);
 }
