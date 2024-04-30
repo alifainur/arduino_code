@@ -20,7 +20,7 @@ void task2(void * parameters){
 }
 
 void setup() {
-  Serial.begin(9600);
+  Serial.begin(115200);
 // create task(task function, task name, stack size, parameter, priority, task handle, pin task to core)
   xTaskCreate(task1, "Task 1", 1000, NULL, 1, NULL);
   xTaskCreate(task2, "Task 2", 1000, NULL, 1, NULL);
