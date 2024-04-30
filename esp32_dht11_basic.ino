@@ -2,12 +2,11 @@
 #define DHT11PIN 33 //jgn guna 34,35,36,39
 
 DHT dht(DHT11PIN, DHT11);
+
 void setup()
 {
-  
-  Serial.begin(9600);
-/* Start the DHT11 Sensor */
-  dht.begin();
+  Serial.begin(115200);
+  dht.begin(); //Start the DHT11 sensor
 }
 
 void loop()
