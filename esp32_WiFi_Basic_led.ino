@@ -20,7 +20,7 @@ void connectToWiFi(){
 
 void setup() {
   pinMode(led_WiFi, OUTPUT);
-  Serial.begin(9600);
+  Serial.begin(115200);
   connectToWiFi();
 }
 
