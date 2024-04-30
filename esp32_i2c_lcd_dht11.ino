@@ -6,7 +6,7 @@ int lcdRows = 2;
 LiquidCrystal_I2C lcd(0x27, lcdColumns, lcdRows);  
 
 void setup(){
-  Serial.begin(9600);
+  Serial.begin(115200);
   dht.begin();
   lcd.init();                   
   lcd.backlight();
