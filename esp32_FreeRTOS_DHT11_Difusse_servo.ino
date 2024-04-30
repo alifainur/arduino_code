@@ -24,7 +24,7 @@ void loop2( void * parameters ){
 void setup() {
   weeekly.attach(12,500,2500);
   pinMode(diffuseSensor,INPUT);
-  Serial.begin(9600);
+  Serial.begin(115200);
   dht.begin();
 
   xTaskCreatePinnedToCore(loop2, "dht11", 5000, NULL, 1, &Task1, 0);
