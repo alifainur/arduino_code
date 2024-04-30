@@ -14,7 +14,7 @@ const int relay1 = 21;
 const int relay2 = 22;
 
 void setup() {
-  Serial.begin(9600);
+  Serial.begin(115200);
   setup_wifi();
   client.setServer(mqtt_server, 1883);
   client.setCallback(callback);
