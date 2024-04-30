@@ -38,7 +38,7 @@ void reconnect() {
 }
 
 void setup() {
-  Serial.begin(9600);
+  Serial.begin(115200);
   connectToWiFi();
   client.setServer(mqtt_server, 1883);
   dht.begin();
