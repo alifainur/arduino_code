@@ -2,7 +2,7 @@
 
 void setup() {
     WiFi.mode(WIFI_STA);
-    Serial.begin(9600);
+    Serial.begin(115200);
     WiFiManager wm;
     wm.resetSettings();
     bool res = wm.autoConnect("ESP32_Fainur","aaaaaaaa");
