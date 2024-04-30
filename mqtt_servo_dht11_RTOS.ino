@@ -104,7 +104,7 @@ void callback(char* topic, byte* payload, unsigned int length) {
 }
 
 void setup() {
-  Serial.begin(9600);
+  Serial.begin(115200);
   weeekly.attach(12, 500, 2500);
   dht.begin();
   setup_wifi();
