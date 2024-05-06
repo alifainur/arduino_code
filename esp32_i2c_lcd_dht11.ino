@@ -1,5 +1,5 @@
 #include "DHT.h"
-DHT dht(33, DHT11);
+DHT dht(33, DHT11); //tukar sini untuk DHT22
 #include <LiquidCrystal_I2C.h>
 int lcdColumns = 16;
 int lcdRows = 2;
