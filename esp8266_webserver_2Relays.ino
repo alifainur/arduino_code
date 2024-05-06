@@ -12,11 +12,11 @@ const char* PARAM_INPUT_1 = "state";
 const char* PARAM_INPUT_2 = "state2";
 
 //**********Pin Assignments***********
-const int relay1 = 5;    // D1 Pin of NodeMcu
-const int switch1 = 12;  // D6 Pin of NodeMcu
-const int relay2 = 4;    // D2 Pin of NodeMcu
-const int switch2 = 14;  // D5 Pin of NodeMcu
-const int Build_in_LED = 16;
+const int relay1 = 5;    // D1 Pin of NodeMCU
+const int switch1 = 12;  // D6 Pin of NodeMCU
+const int relay2 = 4;    // D2 Pin of NodeMCU
+const int switch2 = 14;  // D5 Pin of NodeMCU
+const int Build_in_LED = 16; //D0 Pin of NodeMCU
 //************************************
 
 //*********************Variables declaration**********************
