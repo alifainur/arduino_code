@@ -3,8 +3,8 @@
 #include <ESPAsyncWebServer.h>
 
 //******Enter your network credentials************
-const char* ssid = "위클리";
-const char* password = "nfaizahsel84";
+const char* ssid = "Your Network SSID";
+const char* password = "Your network Password";
 //************************************************
 
 //Define Status
