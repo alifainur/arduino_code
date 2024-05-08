@@ -6,6 +6,7 @@ LiquidCrystal_I2C lcd(0x27, lcdColumns, lcdRows);
 void setup(){
   lcd.init();
   lcd.backlight();
+  pinMode(2,OUTPUT);
 }
 
 void loop(){
