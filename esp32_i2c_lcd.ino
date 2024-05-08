@@ -17,7 +17,7 @@ void setup(){
 
 void loop(){
   // set cursor to first column, first row
-  lcd.setCursor(0, 0);
+  lcd.setCursor(0,0);
   // print message
   lcd.print("Hello, World!");
   delay(1000);
