@@ -2,7 +2,13 @@
 Servo weeekly; // buat servo objek dengan nama 'weeekly'
 
 void setup() {
-  weeekly.attach(12,500,2500); // 12=pin, 500=min, 2500=max
+  ESP32PWM::allocateTimer(0);
+	ESP32PWM::allocateTimer(1);
+	ESP32PWM::allocateTimer(2);
+	ESP32PWM::allocateTimer(3);
+	weeekly.setPeriodHertz(50);
+  weeekly.attach(26,500,2500); // 26=pin, 500=min(500us), 2500=max(2500us)
+  // PWM GPIO pin yang digalakkan di ESP32 termasuk pin 2,4,12-19,21-23,25-27,32-33 
 }
 
 void loop() {
