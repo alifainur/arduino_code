@@ -13,7 +13,7 @@ void setup() {
 
 void loop() {
   weeekly.write(0); // suruh servo gerak 0°
-  delay(1000);
+  delay(1500);
   weeekly.write(180); // suruh servo gerak 180°
-  delay(1000);
+  delay(1500);
 }
