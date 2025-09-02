@@ -1,12 +1,13 @@
-const int pin = 16;
-const int chan = 0;
+const int buzzerPin = 16;
+const int freq = 5000;
+const int resolution = 8;
 
 void setup() {}
 
 void loop() {
-  ledcAttachPin(pin,chan);
-  ledcWriteTone(chan, 300);
-  delay(1000);
-  ledcDetachPin(pin);
-  delay(1000);
+    ledcAttach(buzzerPin, freq, resolution);
+    ledcWriteTone(buzzerPin, 500);
+    delay(500);
+    ledcWriteTone(buzzerPin, 0);   
+    delay(500);
 }
