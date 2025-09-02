@@ -1,13 +1,36 @@
-const int pin = 16;
-const int chan = 0;
+const int pin = 26;
+const int freq = 5000;
+const int resolution = 8;
 
 void setup() {
-  ledcAttachPin(pin,chan);
+  ledcAttach(pin, freq, resolution);
 }
 
 void loop() {
-  ledcWriteNote(chan, NOTE_C, 5);
-  delay(500);
-  ledcWrite(chan,0);
-  delay(500);
+    ledcWriteNote(pin, NOTE_E, 5);
+    delay(800);
+    ledcWriteNote(pin, NOTE_D, 5);   
+    delay(400);
+    ledcWriteNote(pin, NOTE_Fs, 4);
+    delay(400);
+    ledcWriteNote(pin, NOTE_Gs, 4);   
+    delay(800);
+    ledcWriteNote(pin, NOTE_Cs, 5);
+    delay(800);
+    ledcWriteNote(pin, NOTE_B, 4);   
+    delay(400);
+    ledcWriteNote(pin, NOTE_D, 4);
+    delay(400);
+    ledcWriteNote(pin, NOTE_E, 4);   
+    delay(800);
+    ledcWriteNote(pin, NOTE_B, 4);
+    delay(800);
+    ledcWriteNote(pin, NOTE_A, 4);   
+    delay(400);
+    ledcWriteNote(pin, NOTE_Cs, 4);
+    delay(400);
+    ledcWriteNote(pin, NOTE_E, 4);   
+    delay(200);
+    ledcWriteNote(pin, NOTE_A, 4);   
+    delay(800);
 }
