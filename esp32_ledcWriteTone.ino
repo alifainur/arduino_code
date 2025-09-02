@@ -1,13 +1,14 @@
 const int pin = 16;
-const int chan = 0;
+const int channel = 0;
 
 void setup() {
-  ledcAttachPin(pin,chan);
+  ledcAttachPin(pin,channel);
 }
 
 void loop() {
-  ledcWriteTone(chan, 500);
+  ledcWriteTone(channel, 500);
   delay(500);
-  ledcWrite(chan,0);
+  ledcWrite(channel,0);
   delay(500);
 }
+
