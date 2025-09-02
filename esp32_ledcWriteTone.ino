@@ -1,14 +1,17 @@
 const int pin = 16;
-const int channel = 0;
+const int freq = 5000;
+const int resolution = 8;
 
 void setup() {
-  ledcAttachPin(pin,channel);
+  ledcAttach(pin, freq, resolution);
 }
 
 void loop() {
-  ledcWriteTone(channel, 500);
-  delay(500);
-  ledcWrite(channel,0);
-  delay(500);
+
+    ledcWriteTone(pin, 500);
+    delay(1000);
+    ledcWriteTone(pin, 0);   
+    delay(1000);
 }
+
 
